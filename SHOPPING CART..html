@@ -1,0 +1,69 @@
+<html>
+<head>
+    
+    <title>Kids Shopping Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: peachpuff;
+        }
+        h1 {
+            color: blue;
+        }
+        .item {
+            background-color: yellow;
+            border: 2px solid #333;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .cart {
+            margin-top: 20px;
+            padding: 10px;
+            background-color:pink;
+            display: inline-block;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Kids Shop!</h1>
+    <p>Click the button to add an item to the cart.</p>
+
+    <div class="item">
+        <p>🎈 Balloon - ₹50</p>
+        <button onclick="addToCart('Balloon')">Add to Cart</button>
+    </div>
+
+    <div class="item">
+        <p>🧸 Teddy Bear - ₹200</p>
+        <button onclick="addToCart('Teddy Bear')">Add to Cart</button>
+    </div>
+
+    <div class="item">
+        <p>🚗 Toy Car - ₹150</p>
+        <button onclick="addToCart('Toy Car')">Add to Cart</button>
+    </div>
+
+    <div class="cart">
+        <h3>Shopping Cart</h3>
+        <p id="cartList">Cart is empty</p>
+    </div>
+
+    <script>
+        function addToCart(item) {
+            let cart = document.getElementById("cartList");
+            if (cart.innerHTML === "Cart is empty") {
+                cart.innerHTML = item;
+            } else {
+                cart.innerHTML += ", " + item;
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
